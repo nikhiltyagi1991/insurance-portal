@@ -1,3 +1,4 @@
+const axios = require('axios');
 module.exports = {
 
 
@@ -38,7 +39,7 @@ module.exports = {
 
 
     fn: async function (inputs, exits) {
-        let insuredValue = appraisalValue - Math.round(Math.random() * 100);
+        let insuredValue = inputs.appraisalValue - Math.round(Math.random() * 100);
         let deductible = 0.1 * insuredValue; // 10 % is deductible
 
         let quote = {
@@ -55,7 +56,7 @@ module.exports = {
                 _.pick(quote, 'mortid', 'm1sid', 'insuredValue', 'deductible'));
             return exits.success({ createdQuote, message: 'Quote sucessfully created' });
         } catch (e) {
-            return exits.invalid({ message: 'Unable to contact MBR service.' })
+            return exits.invalid({ message: 'Unable to contact MBR service.', error: e })
         }
 
     }

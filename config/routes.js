@@ -10,6 +10,6 @@
 
 module.exports.routes = {
 
-    'POST insurance/quote': 'insurance/quote',
-    'GET insurance/quote': 'insurance/getquote'
+    'POST /insurance/quote': 'insurance/quote',
+    'GET /insurance/quote': 'insurance/getquote'
 };
