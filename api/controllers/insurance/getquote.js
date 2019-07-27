@@ -33,7 +33,7 @@ module.exports = {
         if (incQuote) {
             return exits.success({ incQuote, message: 'Quote found' })
         } else {
-            return exits.success({ message: 'Unable to find quote for the given property' })
+            return exits.invalid({ message: 'Unable to find quote for the given property' })
         }
     }
 
