@@ -52,7 +52,7 @@ module.exports = {
         let createdQuote = await Incquotes.create(quote).fetch();
 
         try {
-            let response = await axios.post('http://localhost:1337' + '/confirmation/insurance',
+            let response = await axios.post('http://rockers-mbr.eastus2.cloudapp.azure.com' + '/confirmation/insurance',
                 _.pick(quote, 'mortid', 'm1sid', 'insuredValue', 'deductible'));
             return exits.success({ createdQuote, message: 'Quote sucessfully created' });
         } catch (e) {
