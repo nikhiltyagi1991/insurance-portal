@@ -1,0 +1,23 @@
+
+######################## Request ####################
+/insurance/quote?m1sid=1234
+GET
+undefined
+{}
+######################## Response ####################
+200
+undefined
+null
+{
+  "incQuote": {
+    "createdAt": 1564271105180,
+    "updatedAt": 1564271105180,
+    "id": "5d3ce20110a66b413a1c361d",
+    "m1sid": "1234",
+    "mortid": "04f721e9-7c6f-57eb-92ac-4156b1feab7a",
+    "appraisalValue": 8000,
+    "insuredValue": 7928,
+    "deductible": 792.8000000000001
+  },
+  "message": "Quote found"
+}
